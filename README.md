@@ -1,4 +1,4 @@
-#📝 EEPROM Defaultwert-Writer für ATtiny412
+# EEPROM Defaultwert-Writer für ATtiny412
 
 - Fügt ein separates Sketch zum Schreiben von Standardwerten in den EEPROM hinzu
 - Werte:
