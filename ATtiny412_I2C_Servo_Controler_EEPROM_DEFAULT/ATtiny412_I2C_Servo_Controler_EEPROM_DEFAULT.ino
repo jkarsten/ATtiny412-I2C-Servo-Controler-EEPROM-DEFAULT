@@ -20,7 +20,7 @@
 #define DEFAULT_ANFANG 0
 #define DEFAULT_ENDE 180
 #define DEFAULT_SPEED 0
-#define DEFAULT_I2C_ADRESSE 250
+#define DEFAULT_I2C_ADRESSE 8
 #define DEFAULT_PULSE_MIN 500
 #define DEFAULT_PULSE_MAX 2500
 
@@ -103,10 +103,12 @@ void setup() {
     // Wenn alles OK dann LED an
     VPORTA.OUT |= PIN3_bm;
   } else {
-    // Wenn Fehler dann LED blinkt
-    while (1) {
-      VPORTA.OUT ^= PIN3_bm;
-      delay(250);
+    // Schnelles Blinken bei Fehler
+    while (true) {
+      VPORTA.OUT |= PIN3_bm;  // LED an
+      delay(100);
+      VPORTA.OUT &= ~PIN3_bm;  // LED aus
+      delay(100);
     }
   }
 }
