@@ -6,7 +6,7 @@
   - Anfang: 0
   - Ende: 180
   - Speed: 0
-  - I²C-Adresse: 250
+  - I²C-Adresse: 8
   - PulseMin: 500 µs
   - PulseMax: 2500 µs
 - Schreibt zusätzlich eine XOR-Checksumme zur Validierung der Daten (Adresse 0x09)
